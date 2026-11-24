@@ -1,0 +1,5 @@
+output/
+*.csv
+!examples/*.csv
+.vscode/
+testResults.xml

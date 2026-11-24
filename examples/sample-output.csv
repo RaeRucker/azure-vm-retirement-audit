@@ -1,0 +1,4 @@
+"Subscription","ResourceGroup","Name","ResourceType","Location","PowerState","VmSize","Series","Status","RetirementDate","DaysUntilRetirement","SuggestedReplacement"
+"Contoso-Prod","rg-app","app-02","VM","eastus2","running","Standard_DS3_v2","Dsv2","Retiring","2028-05-01","524","Dsv5 / Dsv6 / Dasv6"
+"Contoso-Prod","rg-web","web-vmss","VM Scale Set","eastus2","","Standard_D2_v2","Dv2","Retiring","2028-05-01","524","Dsv5 / Dsv6 / Dasv6 (memory-heavy D11-D15: Esv5 / Esv6)"
+"Contoso-Dev","rg-tools","jump-01","VM","centralus","deallocated","Standard_B2ms","B (v1)","Retiring","2028-11-15","722","Bsv2 / Basv2 / Bpsv2"
