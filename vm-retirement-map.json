@@ -1,5 +1,5 @@
 {
-  "lastReviewed": "2026-11-02",
+  "lastReviewed": "2026-11-27",
   "source": "https://learn.microsoft.com/azure/virtual-machines/sizes/retirement/retired-sizes-list",
   "note": "Retirement plans change. Re-check Microsoft's retired sizes list before sending recommendations to anyone. Patterns are matched case-insensitively against the VM size name (for example Standard_DS3_v2).",
   "series": [
@@ -22,9 +22,9 @@
     { "series": "HBv2",   "pattern": "^Standard_HB120(-\\d+)?rs_v2$",  "status": "Retiring",   "retirementDate": "2027-05-31", "suggestedReplacement": "HBv3 / HBv4 / HBv5 / HX" },
     { "series": "HC",     "pattern": "^Standard_HC44(-\\d+)?rs$",      "status": "Retiring",   "retirementDate": "2027-05-31", "suggestedReplacement": "HBv3 / HBv4 / HBv5 / HX" },
     { "series": "NP",     "pattern": "^Standard_NP\\d+s$",             "status": "Retiring",   "retirementDate": "2027-05-31", "suggestedReplacement": "NDv2 / NCads_H100_v5" },
-    { "series": "Dv3",    "pattern": "^Standard_D\\d+_v3$",            "status": "EndOfLife",  "retirementDate": null,         "suggestedReplacement": "Dsv5 / Dsv6 (no retirement date; reserved instances no longer sold)" },
-    { "series": "Dsv3",   "pattern": "^Standard_D\\d+s_v3$",           "status": "EndOfLife",  "retirementDate": null,         "suggestedReplacement": "Dsv5 / Dsv6 (no retirement date; reserved instances no longer sold)" },
-    { "series": "Ev3",    "pattern": "^Standard_E\\d+_v3$",            "status": "EndOfLife",  "retirementDate": null,         "suggestedReplacement": "Esv5 / Esv6 (no retirement date; reserved instances no longer sold)" },
-    { "series": "Esv3",   "pattern": "^Standard_E\\d+(-\\d+)?s_v3$",   "status": "EndOfLife",  "retirementDate": null,         "suggestedReplacement": "Esv5 / Esv6 (no retirement date; reserved instances no longer sold)" }
+    { "series": "Dv3",    "pattern": "^Standard_D\\d+_v3$",            "status": "EndOfLife",  "retirementDate": "2029-11-15", "suggestedReplacement": "Dsv5 / Dsv6 / Dsv7" },
+    { "series": "Dsv3",   "pattern": "^Standard_D\\d+s_v3$",           "status": "EndOfLife",  "retirementDate": "2029-11-15", "suggestedReplacement": "Dsv5 / Dsv6 / Dsv7" },
+    { "series": "Ev3",    "pattern": "^Standard_E\\d+_v3$",            "status": "EndOfLife",  "retirementDate": "2029-11-15", "suggestedReplacement": "Esv5 / Esv6 / Esv7" },
+    { "series": "Esv3",   "pattern": "^Standard_E\\d+(-\\d+)?s_v3$",   "status": "EndOfLife",  "retirementDate": "2029-11-15", "suggestedReplacement": "Esv5 / Esv6 / Esv7" }
   ]
 }

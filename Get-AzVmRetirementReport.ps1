@@ -30,7 +30,7 @@ param(
     [ValidatePattern('^[0-9a-fA-F-]{36}$')]
     [string[]] $TenantId,
 
-    # Also list series with no retirement date that are end of life for new reservations.
+    # Also list series the map marks EndOfLife (Dv3, Dsv3, Ev3, Esv3). They retire later than the rest.
     [switch] $IncludeEndOfLife,
 
     # Where the CSV goes.

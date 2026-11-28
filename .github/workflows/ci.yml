@@ -39,11 +39,16 @@ jobs:
           Invoke-Pester -Configuration $c
 
   secrets:
+    name: Scan for secrets
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 0
-      - run: |
-          curl -sSL https://github.com/gitleaks/gitleaks/releases/download/v8.21.2/gitleaks_8.21.2_linux_x64.tar.gz | tar xz gitleaks
+      - name: Run gitleaks
+        run: |
+          curl -sSLo gitleaks.tar.gz https://github.com/gitleaks/gitleaks/releases/download/v8.21.2/gitleaks_8.21.2_linux_x64.tar.gz
+          curl -sSLo checksums.txt https://github.com/gitleaks/gitleaks/releases/download/v8.21.2/gitleaks_8.21.2_checksums.txt
+          grep ' gitleaks_8.21.2_linux_x64.tar.gz$' checksums.txt | sed 's/gitleaks_8.21.2_linux_x64.tar.gz/gitleaks.tar.gz/' | sha256sum -c -
+          tar xzf gitleaks.tar.gz gitleaks
           ./gitleaks detect --source . --redact --verbose
